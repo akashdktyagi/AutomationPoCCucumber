@@ -57,7 +57,7 @@ public class STEPS_RegisterAPatient {
 
 	}
 
-	@When("All the register a patient form fields is filled as {string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string}")
+	@When("register a patient form fields is filled as {string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string}")
 	public void all_the_register_a_patient_form_fields_is_filled_as(String name, String familyname, String gender, String string4, String string5, String string6, String string7, String string8, String string9, String string10, String string11) {
 		PO_RegisterAPatient.SetName(name);
 		PO_RegisterAPatient.SetFamilyName(familyname);

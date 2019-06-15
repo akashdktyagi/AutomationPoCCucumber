@@ -13,7 +13,7 @@ public class PO_Cmn {
 		driver = d;
 	}
 
-	@FindBy(how = How.NAME,using = "breadcrumbs")
+	@FindBy(how = How.ID,using = "breadcrumbs")
 	WebElement txt_breadcrumbs;
 
 	public String GetBreadCrumbText() {
