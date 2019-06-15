@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@reg
+@OpenMRS @register_a_patient
 Feature: validate register patient
   To check when user register a patient after entering all the details of the patient then,
   patient records are saved in to the system and is displayed in Patient Records tab
@@ -30,7 +30,7 @@ Feature: validate register patient
     Then I should be logged in to the application with title as "Home"
     And I click on "RegisterAPatient" tab
     
-  @register_a_patient @reg
+  @register_a_patient @positive
   Scenario: Register a Patient
   	Given Register a Patient Form is displayed
     When register a patient form fields is filled as "Akash","Tyagi","Male","12/12/84","Add1","Add2","Pune","MH","India","411012","1234567891"

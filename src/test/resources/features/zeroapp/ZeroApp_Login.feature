@@ -16,32 +16,31 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@reg @login_feature
+@zero_app @reg @login_feature 
 Feature: Login
   To vaidate and check all aspects of Login functionaity
 
 	#Background:
 
-
   @login @positive
   Scenario: Succesfull Login validation 
   	Given As a user when I launch application in "chrome" 
-	  And navigate to url as "https://demo.openmrs.org/openmrs/index.htm"
-    When I enter user name as "admin"
-    And I enter password as "Admin123"
+	  And navigate to url as "http://zero.webappsecurity.com/login.html"
+    When I enter user name as "username"
+    And I enter password as "password"
     And I click submit button
     Then I should be logged in to the application with title as "Home"
-    Then close the browser
+    And close the browser
     
     @login @negative
     Scenario Outline: User should not be able to login with in valid credentials
     Given As a user when I launch application in "chrome" 
-	  And navigate to url as "https://demo.openmrs.org/openmrs/index.htm"
+	  And navigate to url as "http://zero.webappsecurity.com/login.html"
     When I enter user name as "<Username>"
     And I enter password as "<Password>"
     And I click submit button
     Then application should give error message as "<ErrorMsg>"
-    Then close the browser
+    And close the browser
     
     Examples:
     | Username | Password | ErrorMsg                         |

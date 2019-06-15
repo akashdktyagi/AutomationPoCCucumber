@@ -1,4 +1,4 @@
-package bddcucumber.stepdefs;
+package bddcucumber.zeroapp.stepdefs;
 import healthcare.po.*;
 import java.util.concurrent.TimeUnit;
 
@@ -11,14 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import bddcucumber.healthcare.po.PO_Login;
 import bddcucumber.managers.WebDriverManagerSingleton;
 import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class STEPS_Login {
+public class STEPS_ZeroAppLogin {
 	WebDriver driver;
 	WebDriverManagerSingleton browserManager;
 	Scenario scn ;
@@ -81,11 +83,13 @@ public class STEPS_Login {
 	}
 
 
-	@Then("close the browser")
+	//@Then("close the browser")
+	@After
 	public void close_the_browser() {
 		// Write code here that turns the phrase above into concrete actions
-		driver.quit();
-		browserManager = null;
+		browserManager.CloseDriver();
+		scn.write("Browser Closed");
+	
 	}
 	
 	@Then("application should give error message as {string}")

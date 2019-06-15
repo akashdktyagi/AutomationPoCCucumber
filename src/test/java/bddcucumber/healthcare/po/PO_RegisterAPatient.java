@@ -1,9 +1,10 @@
-package healthcare.po;
+package bddcucumber.healthcare.po;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
 public class PO_RegisterAPatient {
 	//Step 1 Driver
@@ -13,6 +14,10 @@ public class PO_RegisterAPatient {
 	public PO_RegisterAPatient(WebDriver d) {
 		driver = d;
 	}
+
+
+	@FindBy(how = How.NAME,using = "breadcrumbs")
+	WebElement txt_breadcrumbs;
 
 	//Elements or Locators
 	@FindBy(how = How.NAME,using = "givenName")
@@ -38,6 +43,12 @@ public class PO_RegisterAPatient {
 
 	public void ClickGenderSideMenu() {
 		link_side_menu_gender.click();
+	}
+	
+	public void SelectGender(String arg) {
+		Select s = new Select(select_gender);
+		s.selectByVisibleText(arg);
+		
 	}
 	
 }

@@ -1,35 +1,35 @@
-package healthcare.po;
+package bddcucumber.zeroapp.po;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class PO_Login {
+public class PO_ZeroAppLogin {
 
 	//Step 1 Driver
 	WebDriver driver;
 
 	//Step: Paramatrized constructor
-	public PO_Login(WebDriver d) {
+	public PO_ZeroAppLogin(WebDriver d) {
 		driver = d;
 	}
 
 	//Elements or Locators
-	@FindBy(how = How.ID,using = "username")
+	@FindBy(how = How.ID,using = "user_login")
 	WebElement txtbx_username;
 
-	@FindBy(how = How.ID,using = "password")
+	@FindBy(how = How.ID,using = "user_password") 
 	WebElement txtbx_password;
 
-	@FindBy(how = How.ID,using = "loginButton")
+	@FindBy(how = How.NAME,using = "submit") 
 	WebElement btn_submit;
 	
 	@FindBy(how = How.ID,using = "Outpatient Clinic")
 	WebElement tab_outpatient_clinic;
 	
 	
-	@FindBy(how = How.ID,using = "error-message")
+	@FindBy(how = How.CLASS_NAME,using = "alert alert-error")
 	WebElement txt_error_msg;
 
 	//Methods
@@ -42,7 +42,7 @@ public class PO_Login {
 	}
 
 	public void ClickSubmitButton() {
-		tab_outpatient_clinic.click();
+		//tab_outpatient_clinic.click();
 		btn_submit.click();
 	}
 	
