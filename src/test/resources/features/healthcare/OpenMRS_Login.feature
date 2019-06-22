@@ -21,7 +21,7 @@ Feature: Login
   To vaidate and check all aspects of Login functionaity
 
 	#Background:
-
+	@temp
   @login @positive
   Scenario: Succesfull Login validation 
   	Given As a user when I launch application in "chrome" 

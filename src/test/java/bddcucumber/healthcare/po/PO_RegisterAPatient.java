@@ -17,7 +17,7 @@ public class PO_RegisterAPatient {
 
 
 	@FindBy(how = How.NAME,using = "breadcrumbs")
-	WebElement txt_breadcrumbs;
+	private WebElement txt_breadcrumbs;
 
 	//Elements or Locators
 	@FindBy(how = How.NAME,using = "givenName")

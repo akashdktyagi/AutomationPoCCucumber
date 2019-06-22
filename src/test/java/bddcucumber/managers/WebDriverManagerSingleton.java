@@ -16,7 +16,7 @@ public class WebDriverManagerSingleton {
 	
 	//Instance of Singleton Class
 	private static WebDriverManagerSingleton instanceOfSingletonClass=null;
-	private WebDriver driver;
+	private static WebDriver driver;
 	
 	//Private Constructor
 	private WebDriverManagerSingleton() {

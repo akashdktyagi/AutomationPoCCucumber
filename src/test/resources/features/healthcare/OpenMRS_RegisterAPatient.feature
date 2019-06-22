@@ -38,3 +38,4 @@ Feature: validate register patient
     Then patient is register in the system with patient Id generated
     And patient records are displayed in Find patient tab under menu
 
+

@@ -1,16 +1,10 @@
 package bddcucumber.zeroapp.stepdefs;
-import healthcare.po.*;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import bddcucumber.healthcare.po.PO_Login;
 import bddcucumber.managers.WebDriverManagerSingleton;
 import cucumber.api.Scenario;

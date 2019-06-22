@@ -36,7 +36,6 @@ public class STEPS_Login {
 	@Given("navigate to url as {string}")
 	public void navigate_to_url(String url) {
 		driver.get(url);
-		
 		//Initialize
 		PO_Login = PageFactory.initElements(driver, PO_Login.class);
 	}
@@ -53,8 +52,6 @@ public class STEPS_Login {
 			System.setProperty("webdriver.gecko.driver", "E:\\_AkashStuff\\Automation\\dependencies\\gecko\\geckodriver.exe");
 			//driver =  new FirefoxDriver();
 		}
-
-
 	}
 
 	@When("I enter user name as {string}")
@@ -87,15 +84,12 @@ public class STEPS_Login {
 		scn.write("Title Matched. Login Successfull");
 	}
 
-
-	
 	//@After
 	@Then("close the browser")
 	public void close_the_browser() {
 		// Write code here that turns the phrase above into concrete actions
 		browserManager.CloseDriver();
 		scn.write("Browser Closed");
-	
 	}
 	
 	@Then("application should give error message as {string}")
