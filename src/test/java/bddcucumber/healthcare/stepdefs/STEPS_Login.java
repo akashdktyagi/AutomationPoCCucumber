@@ -26,34 +26,13 @@ public class STEPS_Login {
 	WebDriver driver;
 	WebDriverManagerSingleton browserManager;
 	Scenario scn ;
-	PO_Login PO_Login;
+	PO_Login PO_Login = PageFactory.initElements(driver, PO_Login.class);
 
 	@Before
 	public void SetUp(Scenario s) {
 		this.scn = s;
 	}
 	
-	@Given("navigate to url as {string}")
-	public void navigate_to_url(String url) {
-		driver.get(url);
-		//Initialize
-		PO_Login = PageFactory.initElements(driver, PO_Login.class);
-	}
-	
-	@Given("As a user when I launch application in {string}")
-	public void as_a_user_launch_application(String browser) {
-
-		if (browser.equalsIgnoreCase("chrome")) {
-			//System.setProperty("webdriver.chrome.driver", "E:\\_AkashStuff\\Automation\\dependencies\\chromedriver\\chromedriver.exe");
-			//driver = new ChromeDriver();
-			browserManager= WebDriverManagerSingleton.getInstanceOfWebDriverManager();
-			driver = browserManager.getDriver();
-		}else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "E:\\_AkashStuff\\Automation\\dependencies\\gecko\\geckodriver.exe");
-			//driver =  new FirefoxDriver();
-		}
-	}
-
 	@When("I enter user name as {string}")
 	public void enter_user_name(String u) {
 		PO_Login.SetUserName(u);
@@ -85,12 +64,7 @@ public class STEPS_Login {
 	}
 
 	//@After
-	@Then("close the browser")
-	public void close_the_browser() {
-		// Write code here that turns the phrase above into concrete actions
-		browserManager.CloseDriver();
-		scn.write("Browser Closed");
-	}
+
 	
 	@Then("application should give error message as {string}")
 	public void application_should_give_error_message_as(String string) {

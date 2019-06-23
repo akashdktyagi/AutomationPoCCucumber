@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
+//mvn sonar:sonar -Dsonar.projectKey=akashdktyagi_AutomationPoCCucumber -Dsonar.organization=akashdktyagi-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=7356ed40450dc767d462b82f6e45fca08b2ea454
 /*
  * Cucumber Options:
  * 1. Plugin : For reporting and output folders configs 
@@ -37,13 +37,13 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features = {"classpath:features/healthcare"},//"classpath:features/zeroapp"},
-	glue= {"bddcucumber/healthcare/stepdefs"},//"bddcucumber/zeroapp/stepdefs"},
+	features = {"classpath:features/eCommerce"},//{"classpath:features/healthcare"},//"classpath:features/zeroapp"},
+	glue= {"bddcucumber/ecommerce/stepdefs","bddcucumber/healthcare/stepdefs"},//{"bddcucumber/healthcare/stepdefs"},//"bddcucumber/zeroapp/stepdefs"},
 	//tags = {"@temp,@positive","~@reg"},//,"@zero_app"},//login_feature, register_a_patient
 	plugin ={"pretty" , "html:target/CucumberResults",
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},//"json:target/cucumber-report.json"
 	monochrome = true,
-	dryRun=false
+	dryRun=true
 
 	)
 public class TestRunner {

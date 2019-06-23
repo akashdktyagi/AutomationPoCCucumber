@@ -71,6 +71,7 @@
 			<version>3.10.2</version>
 		</dependency>
 
+		<!-- FOR EXCEL -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -82,6 +83,23 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.16</version>
 		</dependency>
+
+		<!-- FOR DB Connections to My Access -->
+		<dependency>
+			<groupId>net.sf.ucanaccess</groupId>
+			<artifactId>ucanaccess</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+
+<!-- FOR DB Connections to My SQL -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
+		</dependency>
+
+
 
 	</dependencies>
 

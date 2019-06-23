@@ -3,6 +3,7 @@
 .*classpath
 .*project
 .*settings
+/test-output/
 
 # Log file
 *.log
