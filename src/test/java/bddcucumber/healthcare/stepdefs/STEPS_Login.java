@@ -23,8 +23,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class STEPS_Login {
-	WebDriver driver;
-	WebDriverManagerSingleton browserManager;
+	WebDriverManagerSingleton browserManager = WebDriverManagerSingleton.getInstanceOfWebDriverManager();
+	WebDriver driver = browserManager.getDriver();
 	Scenario scn ;
 	PO_Login PO_Login = PageFactory.initElements(driver, PO_Login.class);
 
@@ -62,8 +62,6 @@ public class STEPS_Login {
 		Assert.assertEquals(expected_title, actual_title);
 		scn.write("Title Matched. Login Successfull");
 	}
-
-	//@After
 
 	
 	@Then("application should give error message as {string}")
