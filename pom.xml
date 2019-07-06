@@ -98,6 +98,17 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.13</version>
 		</dependency>
+		
+<!-- Dependency for Rest Assured -->
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>4.0.0</version>
+    <scope>test</scope>
+</dependency>
+
+
 
 
 

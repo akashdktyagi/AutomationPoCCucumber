@@ -16,7 +16,6 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 @cs_cart   @cs_cart_add_to_cart
 Feature: Add to Cart
   To validate products are added in the cart

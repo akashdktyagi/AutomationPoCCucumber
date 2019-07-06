@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import bddcucumber.managers.dbmanager.DBConnectionManager;
 /*
@@ -25,10 +26,18 @@ public class DBManager {
 
 	//for testing only Should be removed
 	public static void main(String[] args) throws SQLException {
+		
+		ArrayList<String> obj = new ArrayList<String>();
+		obj.add("Akash");
+		obj.add("Tyagi");
+		System.out.print(obj);
+		
+	
 		String q = "Select * from Products";
 		String [][] result  = FetchDataFromDB(q);
 
 		System.out.print(result);
+		
 	}
 
 	public static String[][] FetchDataFromDB(String query) throws SQLException {
