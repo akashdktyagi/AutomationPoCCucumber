@@ -23,6 +23,6 @@ Feature: DB product validation  with Excel File
   @dbvalidation
   Scenario: Compare DB with Excel
     Given I fetch Data from Excel file path as "E:\_AkashStuff\Automation\EclipseWorkspace\AutomationPoCCucumber\src\test\resources\eCommerceData\SearchProducts.xlsx" and Sheet name as "Sheet1"
-    And I fetch Data from DB using "Select * from Products"
+    And I fetch Data from DB using "Select * from Products order by PRODUCTS ASC"
     When compare the DB with Excel
 

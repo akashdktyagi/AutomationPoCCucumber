@@ -42,6 +42,7 @@ public class STEPS_ExcelDBValidations {
 	public void compare_the_DB_with_Excel() {
 		//Assert.assertEquals(oDBData, oExelData);
 		
+		//Sort Both arrats
 		//Check 1
 		Assert.assertEquals(oDBData.length, oExelData.length);
 		

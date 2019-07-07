@@ -26,8 +26,7 @@ public class APIAutomation {
 		
 		int respStatusCode = resp.statusCode();
 		
-		resp.a
-		
+
 		System.out.println("Status code is: " + respStatusCode);
 		System.out.println("Status code is: " + respString);
 	}
