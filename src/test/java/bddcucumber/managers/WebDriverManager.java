@@ -9,7 +9,7 @@ public class WebDriverManager {
 	
 	public static WebDriver GetDriver(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "E:\\_AkashStuff\\Automation\\dependencies\\chromedriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "/users/akashtyagi/downloads/chromedriver");
 			if (driver==null) {
 				driver = new ChromeDriver();
 			}else {

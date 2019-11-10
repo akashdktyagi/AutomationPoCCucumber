@@ -43,7 +43,7 @@ import cucumber.api.junit.Cucumber;
 	plugin ={"pretty" , "html:target/CucumberResults",
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},//"json:target/cucumber-report.json"
 	monochrome = true,
-	dryRun=true
+	dryRun=false
 
 	)
 public class TestRunner2 {

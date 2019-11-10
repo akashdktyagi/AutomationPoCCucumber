@@ -22,6 +22,7 @@ public class STEPS_CsCartHomeSearch {
 	@Before
 	public void SetUp(Scenario s) {
 		this.scn = s;
+		
 	}
 	
 	@When("I enter {string} in top search box")

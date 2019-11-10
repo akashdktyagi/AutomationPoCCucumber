@@ -32,6 +32,22 @@ Feature: Login
     Then I should be logged in to the application with title as "Home"
     And close the browser
     
+     @login @positive
+  Scenario Outline: Succesfull Login validation 
+  	Given As a user when I launch application in "<BROWSER" 
+	  And navigate to url as "http://zero.webappsecurity.com/login.html"
+    When I enter user name as "username"
+    And I enter password as "password"
+    And I click submit button
+    Then I should be logged in to the application with title as "Home"
+    And close the browser
+    Examples :
+    | BROWSER |
+    | chrome  |
+    | firefox |
+    
+    
+    
     @login @negative
     Scenario Outline: User should not be able to login with in valid credentials
     Given As a user when I launch application in "chrome" 

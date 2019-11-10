@@ -20,7 +20,7 @@ public class WebDriverManagerSingleton {
 	
 	//Private Constructor
 	private WebDriverManagerSingleton() {
-		System.setProperty("webdriver.chrome.driver", "E:\\_AkashStuff\\Automation\\dependencies\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/users/akashtyagi/downloads/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}

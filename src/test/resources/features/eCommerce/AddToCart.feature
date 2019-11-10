@@ -41,6 +41,7 @@ Feature: Add to Cart
 			Then my cart is updated with product quantity as 1 and correct total price
 	    And close the browser
 		
+		@smoke
 		Scenario: Add to cart two different products
 	    When I enter "computer" in top search box
 	    And click on search submit button 
